@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% for pro in product %}
+        {{ pro.p_name }}
+        {% endfor %}
+    </title>
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+     <!-- myself -->
+    <link href="{% static 'css/a_header.css' %}" rel="stylesheet">
+    <link href="{% static 'css/footer.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/detail.css' %}" rel="stylesheet">
+    <!-- selection css -->
+    <link href="{% static 'css/selection_mphone.css' %}" rel="stylesheet">
+    <!-- jquery and bootstrap -->
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- myself -->
+    <script type="text/javascript" src="{% static 'js/js_for_a.js' %}"></script>
+
+</head>
+<body>
+<!-- 头部-->
+{% include 'xianyu/a_header.html' %}
+
+<!-- 中间部分 -->
+<div id="big_box">
+    <div class="box_left">
+        <div class="box_pname">
+            {% for p in product %}
+            <p><strong style="font-size: 16px;">{{ p.p_name }}</strong></p>
+
+            <div class="box_pname_a">
+                <div class="box_pname_left">
+                    <img src="{{ p.img_address }}" alt="" class="img-thumbnail">
+                </div>
+                <div class="box_pname_right">
+                    <div class="right-money matop">
+                        <span>现价：</span>
+                        <span style="font-size: 18px; color:#ff4721; font-weight: 700;">{{ p.p_money }}</span>
+                        <span> 元</span>
+                    </div>
+                    <div class="right-where matop">
+                        <span>区域：**/**</span>
+                    </div>
+                    <div class="right-span matop">
+                        <span><button type="button" class="btn btn-default btn-xs btn-my" disabled="disabled">真实个人</button></span>
+                        <span><button type="button" class="btn btn-default btn-xs btn-my" disabled="disabled">担保交易</button></span>
+                        <span><button type="button" class="btn btn-default btn-xs btn-my" disabled="disabled">支持全国</button></span>
+                        <span><button type="button" class="btn btn-default btn-xs btn-my" disabled="disabled">在线沟通</button></span>
+                    </div>
+                    <div class="right-buttom">
+                        <span><button type="button" class="btn btn-default btn-lg btn-comm">联系卖家</button></span>
+                        <span><button type="button" class="btn btn-default btn-lg btn-buy">我要购买</button></span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="box_pinfo">
+            <div><strong><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>  宝贝描述</strong></div>
+            <div>
+                {% for p in product %}
+                <span><img src="{{ p.u_touxiang }}" alt="" class="img-circle" style="width:50px; "></span>
+                <span>
+                    <strong>{{ p.u_name }}</strong>
+                </span>
+                <span>有话说</span>
+
+            </div>
+            <div>
+                <div class="well well-lg" style="margin-top: 15px;">
+                    <p>
+                        <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+                         {{ p.p_info }}
+                    </p></div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="box_pboby">
+            <div><strong><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>  宝贝留言</strong></div>
+        </div>
+    </div>
+
+    <div class="box_right">
+
+    </div>
+</div>
+
+
+<!-- 底部-->
+<div class="footer">
+    {% include 'xianyu/footer.html' %}
+</div>
+</body>
+</html>

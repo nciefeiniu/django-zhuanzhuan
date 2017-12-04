@@ -1,0 +1,8 @@
+.body{ width: 1190px; height: auto; margin: 0 auto;}
+.body .body_top{width: 1190px; height: 400px; background-image: url("../images/banner_pc_website.jpg");}
+
+.body_second{ width: auto; height: auto;}
+.body_second li{ list-style-type: none; float: left; width: 12.5%; height: 40px;}
+
+h2{ color: #ff5f57; font-size: 18px; font-weight: 600;}
+

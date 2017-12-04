@@ -1,0 +1,6 @@
+.nav{ width: 1190px; height: 28px; margin: 20px auto; color: #a6a6a6;}
+.selection{ width: 1190px; height: 174px; margin: 10px auto;}
+.secitem{ margin: 10px;}
+.left-selection{ width: 65px; height: 32px; margin-right: 40px;}
+.right-selection a{ color: #a6a6a6; text-decoration: none; font-size: 12px; margin-right: 12px;}
+.right-selection .a_left{ color: #ff5647; font-weight: 700;}

@@ -1,0 +1,21 @@
+a{ text-decoration: none; color: #fff;}
+
+body{ font-size: 14px;}
+.signup-info{ position: relative; width: 520px; height: auto; margin: 0 auto; margin-top: 10%;}
+
+.signup-info-top{ width: 520px; height: 29px;}
+.signup-info-top > .signup-info-top-left{ float: left; color: white;  }
+.signup-info-top > .signup-info-top-right{ float: right; color: white;}
+
+.signup-info-logo{ width: 520px; height: 86px; background-color: white;  padding-top: 20px;}
+.signup-info-logo-png{ background-image: url("../images/logo.png"); margin: 10px auto; width:136px; height: 46px; }
+
+.signup-info-box{ width: 520px; height: auto; background-color: white; margin: 0px auto; padding-top: 5px; padding-bottom: 40px;}
+.signup-info-box-a{width: 470px; height: auto; margin: 0 auto;}
+input{ width: 420px; height: 50px; border: 2px solid #EBEBEB; font-size: 16px; padding-left: 15px; margin-top: 40px; }
+.tijiao{width: 460px; height: 50px;border: 2px solid #EBEBEB; font-size: 16px; background-color: #FF552E;}
+
+.signup-info-botton{ width: 60%; height: auto; margin: 20px auto;}
+.signup-info-botton span{ margin: 0px 10px; color: #fff}
+
+.tips{ color: #FF5252; font-size: 14px;}

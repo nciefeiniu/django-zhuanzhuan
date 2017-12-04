@@ -1,0 +1,70 @@
+<!-- 商品列表的界面 -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>转转</title>
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+     <!-- myself -->
+    <link href="{% static 'css/a_header.css' %}" rel="stylesheet">
+    <link href="{% static 'css/footer.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <!-- selection css -->
+    <link href="{% static 'css/selection_mphone.css' %}" rel="stylesheet">
+    <!-- jquery and bootstrap -->
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- myself -->
+    <script type="text/javascript" src="{% static 'js/js_for_a.js' %}"></script>
+
+
+</head>
+<body>
+<!-- 头部-->
+{% include 'xianyu/a_header.html' %}
+
+<!--中间选项 -->
+{% include 'xianyu/selection_mphone.html' %}
+
+<!-- 中间商品部分-->
+<div id="main">
+    <!--左侧商品栏 -->
+    <div class="main-left">
+        {% for product in products %}
+        <table class="table">
+            <td class="img">
+               <img src="{{ product.img_address }}" alt="" class="img-rounded">
+            </td>
+            <td class="name">
+                <p class="text-muted"><a href="/xianyu/detail/?pid={{ product.p_id }}"> <strong>{{ product.p_name }}</strong></a></p>
+                <p class="money">￥ <strong>{{ product.p_money }}</strong></p>
+                <p><small><span class="glyphicon glyphicon-comment" aria-hidden="true"> {{ product.p_info }}</span></small></p>
+            </td>
+            <td style="width: 400px;"></td>
+            <td class="user">
+                <p><img src="{{ product.u_touxiang }}" alt="" class="img-circle" style="width: 66px; height: 66px;"></p>
+                <p style="margin-left: 15px;">{{ product.u_name }}</p>
+            </td>
+        </table>
+        {% endfor %}
+    </div>
+    <!-- 右侧浮动栏-->
+    <div class="main-right">
+        <img src="{% static 'images/zp_hb.png' %}" class="img-responsive" alt="Responsive image">
+    </div>
+</div>
+
+<!-- Usage as a class 清除浮动-->
+<div class="clearfix"></div>
+
+<!-- 底部-->
+<div class="footer">
+    {% include 'xianyu/footer.html' %}
+</div>
+</body>
+</html>

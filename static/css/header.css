@@ -1,0 +1,8 @@
+{% load static %}
+#header .header_top{ background-color: #ff5f57;}
+#header .header_top .header_top_img{ width:1190px;height: 420px; margin: 0 auto; background-image: url("../images/banner.jpg");}
+#header .header_top .header_top_img span{ width:235px; height: 60px; float: right; margin-top: 300px; margin-right: 48px;}
+
+#header .header_but{ width: 1190px; height: 80px; margin: 0 auto;}
+#header .header_but li{ list-style-type: none; float: left; font-family: Verdana; font-size: 18px;height: 80px; width: 24.9%; color: #666666;}
+

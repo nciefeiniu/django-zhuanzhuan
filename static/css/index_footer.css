@@ -1,0 +1,5 @@
+.footer{background-color: #666666; padding-top: 2px; text-align: center;}
+.footer .f_image{ width: 100px; height: 100px; margin: 20px auto;  margin-top: 50px;}
+.footer .f_image img{ width: 100px;}
+.footer .f_text{ width: 500px; height: auto; margin: 0 auto;}
+.footer .f_text p{ font-size: 14px;}

@@ -1,0 +1,37 @@
+from django.db import models
+
+# Create your models here.
+
+#产品表
+class Product(models.Model):
+    p_id = models.AutoField(primary_key=True)
+    p_name = models.CharField(max_length=150)
+    p_money = models.IntegerField()
+    p_number = models.IntegerField()
+    p_info = models.TextField()
+    u = models.ForeignKey('User', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'product'
+
+#用户表
+class User(models.Model):
+    u_id = models.AutoField(primary_key=True)
+    u_name = models.CharField(max_length=50)
+    u_passwd = models.CharField(max_length=50)
+    u_touxiang = models.CharField(max_length=100)
+
+    class Meta:
+        managed = False
+        db_table = 'user'
+
+#图片表
+class Images(models.Model):
+    img_id = models.AutoField(primary_key=True)
+    img_address = models.CharField(max_length=200)
+    p_id = models.ForeignKey('Product', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'images'

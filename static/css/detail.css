@@ -1,0 +1,19 @@
+#big_box{ width: 1100px; height: auto; margin: 0 auto;}
+#big_box .box_left{ width: 750px; height: auto; margin: 0 20px 160px 50px;}
+#big_box .box_right{ width: 280px; height: auto;}
+#big_box .box_left .box_pname{ margin: 10px;}
+.box_pname{ width: 750px; height: 429px;}
+
+.box_pname_a > div{ float: left; margin-top: 20px;}
+.box_pname_left{ width: 370px; height: 370px }
+.box_pname_right{ width: 330px; margin-left: 30px;}
+
+
+.matop{ margin-top: 25px;}
+.right-buttom{ margin-top: 40px;}
+
+.btn-my{ border:solid 1px #ffa559; color: #ffa559; margin-right: 10px; margin-bottom: 10px; }
+.btn-comm{ border: solid 1px #ff472e; background-color: #ff472e; color: white; margin-right: 50px;}
+.btn-buy{ border: solid 1px #ff472e; color: #ff472e;}
+
+.box_pinfo{ margin-top: 30px;}
