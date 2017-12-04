@@ -28,8 +28,10 @@ def signup(request):
         if sf.is_valid():
             username = sf.cleaned_data['username']
             password = sf.cleaned_data['password']
-            userhas = User.objects.get(u_name=username)
-            if userhas != 0:
+            userhas = User.objects.filter(u_name=username)
+            print(len(userhas))
+            print(username)
+            if len(userhas) != 0:
                 return render(request, 'xianyu/signup.html', {'sf':sf, 'tip':'用户名存在' })
             else:
                 registAdd = User.objects.get_or_create(u_name=username, u_passwd=password)
