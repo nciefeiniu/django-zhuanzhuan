@@ -80,7 +80,7 @@ def detail(request):
     has_product = Product.objects.filter(p_id=p_id)
     if has_product:
         product = Product.objects.raw(
-            'select a.p_id,a.p_name,a.p_money,a.p_number,a.p_info,b.img_address,c.u_name,c.u_touxiang from product a, images b, user c where a.p_id='+p_id+' and b.p_id='+p_id+'; ')
+            'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id where p.p_id = '+p_id+'; ')
         print(product)
         return render(request, 'xianyu/detail.html', {'fs':fs, 'product': product})
 
