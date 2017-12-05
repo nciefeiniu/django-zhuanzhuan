@@ -4,14 +4,24 @@ from django.template.loader import get_template
 from django import forms
 from .models import User,Product,Images
 from django.http import HttpResponseRedirect
+import random
 
 # Create your views here.
 def index(request):
-    template = get_template('xianyu/index.html')
-    html = template.render(locals())
-    return HttpResponse(html)
+    #生成首页随机的产品展示
+    count = Product.objects.count()
+    
+    if count<5:
+        phones = Product.objects.raw(
+            'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit 5 ')
+        return render(request, 'xianyu/index.html', {'phones': phones})
+    else:
+        num = random.randint(0,count-5)
+        phones = Product.objects.raw(
+                'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit '+num+','+(num+5))
+        return render(request, 'xianyu/index.html', {'phones':phones})
 
-#表单
+#登录/注册表单
 class Form(forms.Form):
     username = forms.CharField(label="帐号 ", max_length=100)
     password = forms.CharField(label="密码 ", widget=forms.PasswordInput())
@@ -90,3 +100,7 @@ def detail(request):
         template = get_template('xianyu/404.html')
         html = template.render(locals())
         return HttpResponse(html)
+
+#添加商品
+def addproduct(request):
+    pass
