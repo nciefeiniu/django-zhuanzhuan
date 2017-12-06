@@ -15,6 +15,7 @@ class Product(models.Model):
         managed = False
         db_table = 'product'
 
+
 #用户表
 class User(models.Model):
     u_id = models.AutoField(primary_key=True)
@@ -30,8 +31,9 @@ class User(models.Model):
 class Images(models.Model):
     img_id = models.AutoField(primary_key=True)
     img_address = models.CharField(max_length=200)
-    p_id = models.ForeignKey('Product', models.DO_NOTHING)
+    p_id = models.IntegerField()
 
     class Meta:
         managed = False
         db_table = 'images'
+

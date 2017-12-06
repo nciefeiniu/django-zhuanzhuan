@@ -5,12 +5,18 @@ from django import forms
 from .models import User,Product,Images
 from django.http import HttpResponseRedirect
 import random
+from django.core.files.storage import FileSystemStorage
+import os
+import chunk
+
+#上传图片存储位置
+path = 'static/up_images/'
 
 # Create your views here.
 def index(request):
     #生成首页随机的产品展示
     count = Product.objects.count()
-    
+
     if count<5:
         phones = Product.objects.raw(
             'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit 5 ')
@@ -18,7 +24,7 @@ def index(request):
     else:
         num = random.randint(0,count-5)
         phones = Product.objects.raw(
-                'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit '+num+','+(num+5))
+                'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit '+str(num)+','+str(num+5))
         return render(request, 'xianyu/index.html', {'phones':phones})
 
 #登录/注册表单
@@ -29,6 +35,11 @@ class Form(forms.Form):
 #搜索表单
 class Form_search(forms.Form):
     p_name = forms.CharField( max_length=40, label='', widget=forms.TextInput(attrs={'class':'form-control input-sm','placeholder':"请输入类别或关键字"}))
+
+#发布商品表单
+#class Form_addproduct(forms.Form):
+#    p_name = forms.CharField()
+#    p_money = forms.
 
 #注册
 def signup(request):
@@ -103,4 +114,29 @@ def detail(request):
 
 #添加商品
 def addproduct(request):
-    pass
+    if 'username' in request.session:
+        if request.method == 'POST':
+            u_id = User.objects.get(u_name=request.session['username']).u_id
+            p_name = request.POST['biaoti']
+            p_money = request.POST['jiage']
+            p_num = request.POST['shuliang']
+            p_info = request.POST['jieshao']
+            obj = request.FILES.get('up_img')
+            #上传图片到static/up_images
+            img_name = str(random.randint(10000,99999))+obj.name
+            f = open(os.path.join(path, str(img_name)), 'wb')
+            for line in obj.chunks():
+                f.write(line)
+            f.close()
+            #写入数据库
+            w_db_p = Product(p_name=p_name, p_money=p_money, p_number=p_num,p_info=p_info,u_id=u_id)
+            w_db_p.save()
+            print(w_db_p.p_id)
+            w_db_img = Images(img_address="/static/up_images/"+img_name, p_id=w_db_p.p_id)
+            w_db_img.save()
+        else:
+            template = get_template('xianyu/salepost.html ')
+            html = template.render(locals())
+            return HttpResponse(html)
+    else:
+        return HttpResponseRedirect("/xianyu/login")
