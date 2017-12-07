@@ -56,7 +56,7 @@
                         <span><button type="button" class="btn btn-default btn-xs btn-my" disabled="disabled">在线沟通</button></span>
                     </div>
                     <div class="right-buttom">
-                        <span><button type="button" class="btn btn-default btn-lg btn-comm">联系卖家</button></span>
+                        <span><button type="button" class="btn btn-default btn-lg btn-comm" disabled>联系卖家</button></span>
                         <span><button type="button" class="btn btn-default btn-lg btn-buy">我要购买</button></span>
                     </div>
                 </div>
@@ -79,21 +79,52 @@
                     <p>
                         <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
                          {{ p.p_info }}
-                    </p></div>
+                    </p>
+                </div>
             </div>
             {% endfor %}
         </div>
         <div class="box_pboby">
             <div><strong><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>  宝贝留言</strong></div>
         </div>
+        <div>
+                <div class="well well-lg" style="margin-top: 15px;">
+                    <p>
+                        <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+                          sorry 留言功能暂时关闭
+                    </p>
+                </div>
+            </div>
     </div>
 
     <div class="box_right">
+          <div class="personal">
+                <div class="personal_touxiang">
+                    <div class="personal_img">
+                        {% for p in product %}
+                        <img src="{{ p.u_touxiang }}" class="img-circle">
+                        {% endfor %}
+                    </div>
+                    <p>自我介绍，巴拉巴拉</p>
+                </div>
+                <div class="his_buy">
+                    <h3><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <strong>他的交易</strong></h3>
+                    <div class="his_buy_some">
+                        他还没交易过呢。
+                    </div>
+                </div>
+                <div class="baby_sale">
+                    <h3><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> <strong>他的宝贝</strong></h3>
+                    <div class="his_baby">
+                        测试
+                    </div>
+                </div>
+          </div>
 
     </div>
 </div>
 
-
+<div class="clearfix"></div>
 <!-- 底部-->
 <div class="footer">
     {% include 'xianyu/footer.html' %}

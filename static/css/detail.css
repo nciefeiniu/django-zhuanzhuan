@@ -1,6 +1,12 @@
 #big_box{ width: 1100px; height: auto; margin: 0 auto;}
+#big_box > .box_left{ float: left;}
+#big_box > .box_right{ float: left;}
 #big_box .box_left{ width: 750px; height: auto; margin: 0 20px 160px 50px;}
-#big_box .box_right{ width: 280px; height: auto;}
+#big_box .box_right{ width: 280px; height: auto; }
+.box_right > .personal{ padding: 10px 20px 0 20px; margin-bottom: 20px; background-color: #f8f8f8;}
+.personal > .personal_touxiang{ padding: 20px 0 40px; text-align: center;}
+.personal_img{ width: 80px; height: 80px;margin-left: 40px; text-align: center; position: relative;}
+.personal_img > img{ position: absolute; width: 100%;}
 #big_box .box_left .box_pname{ margin: 10px;}
 .box_pname{ width: 750px; height: 429px;}
 
@@ -17,3 +23,10 @@
 .btn-buy{ border: solid 1px #ff472e; color: #ff472e;}
 
 .box_pinfo{ margin-top: 30px;}
+
+
+.box_right > .his_buy{ position: relative; margin-top: 30px;}
+.his_buy > .his_buy_some{ text-align: center;}
+h3{ font-size: 16px;}
+.baby_sale{ margin-top: 20px; margin-bottom: 30px;}
+.his_baby{ text-align: center;}
