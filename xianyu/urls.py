@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^moblephone/$', views.moblephone, name='moblephone'),
     url(r'^detail/$', views.detail, name='detail'),
     url(r'^ap/$', views.addproduct, name='addproduct'),
+    url(r'^exit/$', views.exit, name='exit'),
 ]

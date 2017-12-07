@@ -87,17 +87,41 @@ def login(request):
         sf = Form()
         return render(request, 'xianyu/login.html', {'sf':sf})
 
+#注销
+def exit(request):
+    del request.session['username']
+    return HttpResponseRedirect("/xianyu/")
+
 #手机类别界面
 def moblephone(request):
+    if 'username' in request.session:
+        uname = "欢迎 "+request.session['username']
+        si = "注销";
+        n_url = ""
+        s_url = "/xianyu/exit/"
+    else:
+        uname = "登录"
+        si = "注册";
+        n_url = "/xianyu/login/"
+        s_url = "/xianyu/signup/"
     #查询数据库中所有商品信息
     products = Product.objects.raw('select a.p_id,a.p_name,a.p_money,a.p_number,a.p_info,b.img_address,c.u_name,c.u_touxiang from product a, images b, user c where a.p_id=b.p_id and a.u_id=c.u_id; ')
-
     #返回搜索框和数据
     fs = Form_search()
-    return  render(request, 'xianyu/phone.html',{'fs': fs, 'products': products})
+    return  render(request, 'xianyu/phone.html',{'fs': fs, 'products': products, 'username':uname, 'signup':si, 'n_url':n_url, 's_url':s_url})
 
 #商品详情界面
 def detail(request):
+    if 'username' in request.session:
+        uname = "欢迎 "+request.session['username']
+        si = "注销";
+        n_url = ""
+        s_url = "/xianyu/exit/"
+    else:
+        uname = "登录"
+        si = "注册";
+        n_url = "/xianyu/login/"
+        s_url = "/xianyu/signup/"
     fs = Form_search()
     p_id = request.GET['pid']
     has_product = Product.objects.filter(p_id=p_id)
@@ -105,7 +129,7 @@ def detail(request):
         product = Product.objects.raw(
             'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id where p.p_id = '+p_id+'; ')
         print(product)
-        return render(request, 'xianyu/detail.html', {'fs':fs, 'product': product})
+        return render(request, 'xianyu/detail.html', {'fs':fs, 'product': product, 'username':uname, 'signup':si, 'n_url':n_url, 's_url':s_url})
 
     else:
         template = get_template('xianyu/404.html')
@@ -115,6 +139,11 @@ def detail(request):
 #添加商品
 def addproduct(request):
     if 'username' in request.session:
+        uname = "欢迎 " + request.session['username']
+        si = "注销";
+        n_url = ""
+        s_url = "/xianyu/exit/"
+
         if request.method == 'POST':
             u_id = User.objects.get(u_name=request.session['username']).u_id
             p_name = request.POST['biaoti']
@@ -135,8 +164,9 @@ def addproduct(request):
             w_db_img = Images(img_address="/static/up_images/"+img_name, p_id=w_db_p.p_id)
             w_db_img.save()
         else:
-            template = get_template('xianyu/salepost.html ')
-            html = template.render(locals())
-            return HttpResponse(html)
+            return render(request, 'xianyu/salepost.html',
+                          { 'username': uname, 'signup': si, 'n_url': n_url,
+                           's_url': s_url})
     else:
         return HttpResponseRedirect("/xianyu/login")
+

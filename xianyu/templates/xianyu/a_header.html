@@ -13,8 +13,8 @@
             <ul>
                 <li><a href="/xianyu/" id="list_login">58同城首页</a></li>
                 <li>搜索</li>
-                <li ><a href="/xianyu/login" id="list_login"> 登录</a></li>
-                <li><a href="/xianyu/signup " id="list_login">注册</a></li>
+                <li ><a href="{{ n_url }}" id="list_login"> {{ username }}</a></li>
+                <li><a href="{{ s_url }} " id="list_login">{{ signup }}</a></li>
                 <li>我的58 </li>
                 <li><a href="" id="list_login"> VIP中心</a></li>
                 <li><a href="" id="list_login"> 帮助</a></li>
@@ -36,7 +36,7 @@
             </form>
         </div>
         <div class="gotosearch">
-            免费发布信息
+            <a href="/xianyu/ap"> 免费发布信息</a>
         </div>
     </div>
 </div>
