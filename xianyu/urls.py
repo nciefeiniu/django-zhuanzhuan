@@ -1,3 +1,7 @@
+"""
+@UpdateTime: 2017/12/7
+@Author: liutao
+"""
 from django.conf.urls import url
 
 from . import views

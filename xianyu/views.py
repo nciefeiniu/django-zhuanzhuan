@@ -1,3 +1,8 @@
+"""
+@UpdateTime: 2017/12/7
+@Author: liutao
+"""
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template.loader import get_template
@@ -5,9 +10,7 @@ from django import forms
 from .models import User,Product,Images
 from django.http import HttpResponseRedirect
 import random
-from django.core.files.storage import FileSystemStorage
 import os
-import chunk
 
 #上传图片存储位置
 path = 'static/up_images/'

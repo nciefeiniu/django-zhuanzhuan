@@ -1,3 +1,8 @@
+"""
+@UpdateTime: 2017/12/7
+@Author: liutao
+"""
+
 from django.db import models
 
 # Create your models here.
