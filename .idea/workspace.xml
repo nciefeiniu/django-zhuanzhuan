@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/xianyu/templates/xianyu/phone.html" line="25" />
-    <bookmark url="file://$PROJECT_DIR$/xianyu/templates/xianyu/salepost.html" line="63" />
+    <bookmark url="file://$PROJECT_DIR$/xianyu/templates/xianyu/phone.html" line="27" />
+    <bookmark url="file://$PROJECT_DIR$/xianyu/templates/xianyu/salepost.html" line="66" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15bd60aa-833a-4b69-9e49-47b3ee44e9b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/xianyu/models.py" afterPath="$PROJECT_DIR$/xianyu/models.py" />
-      <change beforePath="$PROJECT_DIR$/xianyu/tests.py" afterPath="$PROJECT_DIR$/xianyu/tests.py" />
-      <change beforePath="$PROJECT_DIR$/xianyu/urls.py" afterPath="$PROJECT_DIR$/xianyu/urls.py" />
+      <change beforePath="$PROJECT_DIR$/xianyu/templates/xianyu/a_header.html" afterPath="$PROJECT_DIR$/xianyu/templates/xianyu/a_header.html" />
+      <change beforePath="$PROJECT_DIR$/xianyu/templates/xianyu/detail.html" afterPath="$PROJECT_DIR$/xianyu/templates/xianyu/detail.html" />
+      <change beforePath="$PROJECT_DIR$/xianyu/templates/xianyu/index.html" afterPath="$PROJECT_DIR$/xianyu/templates/xianyu/index.html" />
+      <change beforePath="$PROJECT_DIR$/xianyu/templates/xianyu/phone.html" afterPath="$PROJECT_DIR$/xianyu/templates/xianyu/phone.html" />
+      <change beforePath="$PROJECT_DIR$/xianyu/templates/xianyu/salepost.html" afterPath="$PROJECT_DIR$/xianyu/templates/xianyu/salepost.html" />
+      <change beforePath="$PROJECT_DIR$/xianyu/templates/xianyu/selection_mphone.html" afterPath="$PROJECT_DIR$/xianyu/templates/xianyu/selection_mphone.html" />
       <change beforePath="$PROJECT_DIR$/xianyu/views.py" afterPath="$PROJECT_DIR$/xianyu/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,20 +30,21 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xianyu/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#0#46#1" expanded="false" />
-                <element signature="e#392#1058#0" expanded="false" />
-                <element signature="e#1097#1226#0" expanded="false" />
-                <element signature="e#1269#1410#0" expanded="false" />
-                <element signature="e#1412#1419#0" expanded="false" />
-                <element signature="e#1540#2366#0" expanded="false" />
-                <element signature="e#2396#3184#0" expanded="false" />
-                <element signature="e#3213#3288#0" expanded="false" />
-                <element signature="e#3327#3995#0" expanded="false" />
-                <element signature="e#4030#4939#0" expanded="false" />
-                <element signature="e#4976#6275#0" expanded="false" />
+                <element signature="e#1079#1208#0" expanded="false" />
+                <element signature="e#1251#1392#0" expanded="false" />
+                <element signature="e#1394#1401#0" expanded="false" />
+                <element signature="e#1522#2348#0" expanded="false" />
+                <element signature="e#2378#3166#0" expanded="false" />
+                <element signature="e#3195#3270#0" expanded="false" />
+                <element signature="e#3309#3977#0" expanded="false" />
+                <element signature="e#4012#4921#0" expanded="false" />
+                <element signature="e#4958#6257#0" expanded="false" />
+                <marker date="1512968431582" expanded="true" signature="509:645" ph="select p.*,i... product" />
+                <marker date="1512968431582" expanded="true" signature="826:974" ph="select p.*,i... product" />
               </folding>
             </state>
           </provider>
@@ -59,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xianyu/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -71,11 +75,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="selection_mphone.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/selection_mphone.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="phone.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/phone.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="50" column="70" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -84,18 +98,18 @@
       <file leaf-file-name="a_header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/a_header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a_header.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/a_header.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+            <state relative-caret-position="-853">
+              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -104,28 +118,18 @@
       <file leaf-file-name="salepost.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/salepost.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="50">
+              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2925">
-              <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/detail.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="125">
+              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -180,27 +184,27 @@
         <option value="$PROJECT_DIR$/xianyu/templates/xianyu/footer.html" />
         <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/mysite/urls.py" />
-        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/selection_mphone.html" />
         <option value="$PROJECT_DIR$/static/css/base.css" />
         <option value="$PROJECT_DIR$/xianyu/templates/xianyu/base.html" />
         <option value="$PROJECT_DIR$/xianyu/templates/xianyu/404.html" />
-        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/phone.html" />
         <option value="$PROJECT_DIR$/xianyu/templates/xianyu/login.html" />
         <option value="$PROJECT_DIR$/xianyu/templates/xianyu/signup.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/static/css/body.css" />
-        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/index.html" />
         <option value="$PROJECT_DIR$/static/css/addproduct.css" />
         <option value="$PROJECT_DIR$/static/js/disable_btn.js" />
-        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/salepost.html" />
         <option value="$PROJECT_DIR$/static/css/a_header.css" />
-        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/a_header.html" />
-        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/detail.html" />
         <option value="$PROJECT_DIR$/static/css/detail.css" />
         <option value="$PROJECT_DIR$/xianyu/tests.py" />
-        <option value="$PROJECT_DIR$/xianyu/views.py" />
         <option value="$PROJECT_DIR$/xianyu/urls.py" />
         <option value="$PROJECT_DIR$/xianyu/models.py" />
+        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/phone.html" />
+        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/selection_mphone.html" />
+        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/a_header.html" />
+        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/index.html" />
+        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/salepost.html" />
+        <option value="$PROJECT_DIR$/xianyu/templates/xianyu/detail.html" />
+        <option value="$PROJECT_DIR$/xianyu/views.py" />
       </list>
     </option>
   </component>
@@ -210,9 +214,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-149" />
-    <option name="y" value="383" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -234,6 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,7 +301,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -364,28 +367,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="0" width="1936" height="1056" extended-state="0" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20628998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20415778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -451,13 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="60" lean-forward="false" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/selection_mphone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -531,13 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="70" lean-forward="false" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -556,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -575,10 +563,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/detail.html">
+    <entry file="file://$PROJECT_DIR$/xianyu/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2925">
-          <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
+        <state relative-caret-position="75">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/a_header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -591,62 +586,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xianyu/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/salepost.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/a_header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/a_header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/phone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="50" column="70" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xianyu/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#0#46#1" expanded="false" />
-            <element signature="e#392#1058#0" expanded="false" />
-            <element signature="e#1097#1226#0" expanded="false" />
-            <element signature="e#1269#1410#0" expanded="false" />
-            <element signature="e#1412#1419#0" expanded="false" />
-            <element signature="e#1540#2366#0" expanded="false" />
-            <element signature="e#2396#3184#0" expanded="false" />
-            <element signature="e#3213#3288#0" expanded="false" />
-            <element signature="e#3327#3995#0" expanded="false" />
-            <element signature="e#4030#4939#0" expanded="false" />
-            <element signature="e#4976#6275#0" expanded="false" />
+            <element signature="e#1079#1208#0" expanded="false" />
+            <element signature="e#1251#1392#0" expanded="false" />
+            <element signature="e#1394#1401#0" expanded="false" />
+            <element signature="e#1522#2348#0" expanded="false" />
+            <element signature="e#2378#3166#0" expanded="false" />
+            <element signature="e#3195#3270#0" expanded="false" />
+            <element signature="e#3309#3977#0" expanded="false" />
+            <element signature="e#4012#4921#0" expanded="false" />
+            <element signature="e#4958#6257#0" expanded="false" />
+            <marker date="1512968431582" expanded="true" signature="509:645" ph="select p.*,i... product" />
+            <marker date="1512968431582" expanded="true" signature="826:974" ph="select p.*,i... product" />
           </folding>
         </state>
       </provider>
@@ -669,6 +625,54 @@
           <folding>
             <element signature="e#0#46#1" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/selection_mphone.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/phone.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/a_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-853">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/salepost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xianyu/templates/xianyu/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

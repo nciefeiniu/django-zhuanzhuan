@@ -18,22 +18,33 @@ path = 'static/up_images/'
 # Create your views here.
 def index(request):
     #生成首页随机的产品展示
-    count = Product.objects.count()
+    #count = Product.objects.count()
 
-    if count<5:
-        phones = Product.objects.raw(
-            'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit 5 ')
-        return render(request, 'xianyu/index.html', {'phones': phones})
-    else:
-        num = random.randint(0,count-5)
-        phones = Product.objects.raw(
-                'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit '+str(num)+','+str(num+5))
-        return render(request, 'xianyu/index.html', {'phones':phones})
+    #if count<5:
+        #phones = Product.objects.raw(
+        #    'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit 5 ')
+        #return render(request, 'xianyu/index.html', {'phones': p})
+    #else:
+        #num = random.randint(0,count-5)
+        #phones = Product.objects.raw(
+        #        'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit '+str(num)+','+str(num+5))
+    return render(request, 'xianyu/index.html')
 
 #登录/注册表单
 class Form(forms.Form):
     username = forms.CharField(label="帐号 ", max_length=100)
     password = forms.CharField(label="密码 ", widget=forms.PasswordInput())
+	
+class GoodsForm(forms.Form):
+    p_id = forms.CharField(label='商品号',max_length=30)  #商品号
+    p_name = forms.CharField(label='商品名',max_length = 30)   #商品名
+    p_money = forms.CharField(label='价格',max_length =30)              #商品价格
+    p_info = forms.CharField(label='商品描述',max_length = 50)   #商品描述
+    p_number = forms.CharField(label='库存',max_length = 30)
+
+
+	
+
 
 #搜索表单
 class Form_search(forms.Form):
@@ -44,6 +55,8 @@ class Form_search(forms.Form):
 #    p_name = forms.CharField()
 #    p_money = forms.
 
+
+	
 #注册
 def signup(request):
     Method = request.method
