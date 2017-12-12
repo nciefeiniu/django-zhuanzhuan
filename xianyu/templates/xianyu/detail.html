@@ -106,8 +106,10 @@
                     <div class="personal_img">
                         {% for p in product %}
                         <img src="{{ p.u_touxiang }}" class="img-circle">
-                        {% endfor %}
+
                     </div>
+                    <p>{{ p.u_name }}</p>
+                    {% endfor %}
                     <p>自我介绍，巴拉巴拉</p>
                 </div>
                 <div class="his_buy">

@@ -8,3 +8,16 @@ django-zhuanzhuan
 - bootstrap3
 - css/js
 - jquery
+
+
+
+
+
+
+
+
+
+
+
+
+js不好，就没怎么写js。

@@ -18,17 +18,17 @@ path = 'static/up_images/'
 # Create your views here.
 def index(request):
     #生成首页随机的产品展示
-    #count = Product.objects.count()
+    count = Product.objects.count()
 
-    #if count<5:
-        #phones = Product.objects.raw(
-        #    'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit 5 ')
-        #return render(request, 'xianyu/index.html', {'phones': p})
-    #else:
-        #num = random.randint(0,count-5)
-        #phones = Product.objects.raw(
-        #        'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit '+str(num)+','+str(num+5))
-    return render(request, 'xianyu/index.html')
+    if count<5:
+        phones = Product.objects.raw(
+            'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit 5 ')
+        return render(request, 'xianyu/index.html', {'phones': phones})
+    else:
+        num = random.randint(0,count-5)
+        phones = Product.objects.raw(
+               'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id limit '+str(num)+','+str(num+5))
+    return render(request, 'xianyu/index.html', {'phones':phones})
 
 #登录/注册表单
 class Form(forms.Form):
