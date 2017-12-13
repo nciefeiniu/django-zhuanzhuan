@@ -14,4 +14,5 @@ urlpatterns = [
     url(r'^detail/$', views.detail, name='detail'),
     url(r'^ap/$', views.addproduct, name='addproduct'),
     url(r'^exit/$', views.exit, name='exit'),
+    url(r'^buy/$', views.buy, name='buy'),
 ]

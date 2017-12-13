@@ -11,6 +11,7 @@ from .models import User,Product,Images
 from django.http import HttpResponseRedirect
 import random
 import os
+from django.forms.models import model_to_dict
 
 #上传图片存储位置
 path = 'static/up_images/'
@@ -42,10 +43,6 @@ class GoodsForm(forms.Form):
     p_info = forms.CharField(label='商品描述',max_length = 50)   #商品描述
     p_number = forms.CharField(label='库存',max_length = 30)
 
-
-	
-
-
 #搜索表单
 class Form_search(forms.Form):
     p_name = forms.CharField( max_length=40, label='', widget=forms.TextInput(attrs={'class':'form-control input-sm','placeholder':"请输入类别或关键字"}))
@@ -55,8 +52,6 @@ class Form_search(forms.Form):
 #    p_name = forms.CharField()
 #    p_money = forms.
 
-
-	
 #注册
 def signup(request):
     Method = request.method
@@ -112,19 +107,19 @@ def exit(request):
 def moblephone(request):
     if 'username' in request.session:
         uname = "欢迎 "+request.session['username']
-        si = "注销";
+        si = "注销"
         n_url = ""
         s_url = "/xianyu/exit/"
     else:
         uname = "登录"
-        si = "注册";
+        si = "注册"
         n_url = "/xianyu/login/"
         s_url = "/xianyu/signup/"
     #查询数据库中所有商品信息
     products = Product.objects.raw('select a.p_id,a.p_name,a.p_money,a.p_number,a.p_info,b.img_address,c.u_name,c.u_touxiang from product a, images b, user c where a.p_id=b.p_id and a.u_id=c.u_id; ')
-    #返回搜索框和数据
+    #返回数据
     fs = Form_search()
-    return  render(request, 'xianyu/phone.html',{'fs': fs, 'products': products, 'username':uname, 'signup':si, 'n_url':n_url, 's_url':s_url})
+    return  render(request, 'xianyu/phone.html',{'fs': fs, 'products': products, 'username':uname, 'signup':si, 'n_url':n_url, 's_url':s_url,})
 
 #商品详情界面
 def detail(request):
@@ -157,6 +152,7 @@ def addproduct(request):
     if 'username' in request.session:
         uname = "欢迎 " + request.session['username']
         si = "注销";
+        #设置超链接
         n_url = ""
         s_url = "/xianyu/exit/"
 
@@ -186,3 +182,10 @@ def addproduct(request):
     else:
         return HttpResponseRedirect("/xianyu/login")
 
+#购买
+def buy(request):
+    if 'username' in request.session:
+        p_id = request.GET['pid']
+    else:
+        #重定向到登录页面
+        return HttpResponseRedirect("/xianyu/login/")
