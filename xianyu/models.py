@@ -42,3 +42,18 @@ class Images(models.Model):
         managed = False
         db_table = 'images'
 
+
+#订单表
+class Order(models.Model):
+    o_id = models.AutoField(primary_key=True)
+    p_id = models.IntegerField()
+    u_id = models.IntegerField()
+    b_id = models.IntegerField()
+    p_name = models.CharField(max_length=100)
+    p_money = models.IntegerField()
+    time = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'order'
+

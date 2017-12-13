@@ -7,11 +7,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template.loader import get_template
 from django import forms
-from .models import User,Product,Images
+from .models import User,Product,Images,Order
 from django.http import HttpResponseRedirect
 import random
 import os
-from django.forms.models import model_to_dict
+import datetime
 
 #上传图片存储位置
 path = 'static/up_images/'
@@ -61,8 +61,6 @@ def signup(request):
             username = sf.cleaned_data['username']
             password = sf.cleaned_data['password']
             userhas = User.objects.filter(u_name=username)
-            print(len(userhas))
-            print(username)
             if len(userhas) != 0:
                 return render(request, 'xianyu/signup.html', {'sf':sf, 'tip':'用户名存在' })
             else:
@@ -139,7 +137,6 @@ def detail(request):
     if has_product:
         product = Product.objects.raw(
             'select p.*,i.*,u.u_id,u.u_name,u.u_touxiang from product p left join images i on p.p_id=i.p_id left join user u on u.u_id=p.u_id where p.p_id = '+p_id+'; ')
-        print(product)
         return render(request, 'xianyu/detail.html', {'fs':fs, 'product': product, 'username':uname, 'signup':si, 'n_url':n_url, 's_url':s_url})
 
     else:
@@ -175,6 +172,7 @@ def addproduct(request):
             print(w_db_p.p_id)
             w_db_img = Images(img_address="/static/up_images/"+img_name, p_id=w_db_p.p_id)
             w_db_img.save()
+            return HttpResponse('<a href="/xianyu/moblephone/">添加成功，返回首页</a>')
         else:
             return render(request, 'xianyu/salepost.html',
                           { 'username': uname, 'signup': si, 'n_url': n_url,
@@ -186,6 +184,24 @@ def addproduct(request):
 def buy(request):
     if 'username' in request.session:
         p_id = request.GET['pid']
+        uname = request.GET['u']
+        prohave = Product.objects.filter(p_id=p_id)
+        if len(prohave) > 0 :
+            product = list(Product.objects.filter(p_id=p_id))
+            buyer = list(User.objects.filter(u_name=request.session['username']))
+            time = datetime.datetime.now()
+            print(buyer[0])
+            buy = Order.objects.create(p_id=p_id, u_id=uname, b_id=buyer[0].u_id, p_name=product[0].p_name, p_money=product[0].p_money, time=time)
+            if buy :
+                delpro = Product.objects.filter(p_id=p_id).delete()
+                return HttpResponse('<a href="/xianyu/">Ok,Go back</a>')
+            else:
+                return HttpResponse('<a href="/xianyu/">购买失败，请稍后再试,Go back!</a>')
+
+        else:
+            template = get_template('xianyu/404.html')
+            html = template.render(locals())
+            return HttpResponse(html)
     else:
         #重定向到登录页面
         return HttpResponseRedirect("/xianyu/login/")
