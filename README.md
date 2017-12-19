@@ -9,6 +9,9 @@ django-zhuanzhuan
 - css/js
 - jquery
 
+==================
+随意发几张图来凑凑数
+![test1](https://github.com/nciefeiniu/django-zhuanzhuan/blob/master/test1.PNG?raw=true)
 
 
 
