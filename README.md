@@ -2,7 +2,7 @@ django-zhuanzhuan
 
 ## 用django模仿转转网
 
-=================
+---
 
 使用:
 - djngo1.11
@@ -15,8 +15,9 @@ django-zhuanzhuan
  交易还没制作前端，只做了后端数据的处理。
  还有很多功能没能实现，还需努力
 
-==================
-随意发几张图来凑凑数
+---
+
+效果图
 
 
 ![test1](https://github.com/nciefeiniu/django-zhuanzhuan/blob/master/test1.PNG?raw=true)
