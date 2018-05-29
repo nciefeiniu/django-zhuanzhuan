@@ -17,7 +17,7 @@ class Product(models.Model):
     u = models.ForeignKey('User', models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'product'
 
 
@@ -29,7 +29,7 @@ class User(models.Model):
     u_touxiang = models.CharField(max_length=100)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'user'
 
 #图片表
@@ -39,7 +39,7 @@ class Images(models.Model):
     p_id = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'images'
 
 
@@ -54,6 +54,6 @@ class Order(models.Model):
     time = models.DateTimeField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'order'
 
